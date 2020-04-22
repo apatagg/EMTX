@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <!-- Map Fragment embedded with the map object -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/textOrigin"
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:text="Origen" />
+
+        <EditText
+            android:id="@+id/fechaInicio"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="time"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnWaypoints"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Buscar Sitios"
+            android:backgroundTint="#eb0029"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/textInterest"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:text="Interes" />
+
+        <Button
+            android:id="@+id/btnRoute"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="8dp"
+            android:text="Calcular Ruta"
+            android:backgroundTint="#eb0029"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/textArrival"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:text="Destino" />
+
+        <EditText
+            android:id="@+id/fechaFin"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="time"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnIsoline"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:backgroundTint="#eb0029"
+            android:text="Puntos Interes"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnOptions"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#eb0029"
+            android:onClick="openPreferencesConfig"
+            android:padding="8dp"
+            android:text="Opciones"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/white" />
+
+        <fragment
+            android:id="@+id/mapfragment"
+            class="com.here.android.mpa.mapping.AndroidXMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Switch
+            android:id="@+id/switchButton"
+            android:layout_width="130dp"
+            android:layout_height="41dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="Ver puntos" />
+    </RelativeLayout>
+
+</LinearLayout>

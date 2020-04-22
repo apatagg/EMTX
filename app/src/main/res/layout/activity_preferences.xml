@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/preferencesLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PreferencesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/accommodationCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="Hoteles"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/eatDrinkCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="Comer y beber"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/goingOutCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="Ocio"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/naturalGeographicalCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="Parques"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/shoppingCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="Tiendas"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/sightsMuseumsCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="Museos"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/savePreferencesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="createPreferenceList"
+        android:padding="8dp"
+        android:text="Guardar" />
+</LinearLayout>
